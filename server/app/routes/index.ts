@@ -13,6 +13,7 @@ router.get("/api/healthcheck", (req, res) => {
 });
 
 router.get("/api/get", (req, res, next) => {
+  const prefecture = req.params.prefecture
   const query = `SELECT
   year
   , month
@@ -24,7 +25,7 @@ router.get("/api/get", (req, res, next) => {
   , hospitalized
   , deaths
   FROM php-test-292806.test.covid19
-  WHERE prefectureNameE = "Mie" limit 10`;
+  WHERE prefectureNameE = ${prefecture}`;
   const service = new BigQueryService();
   service
     .read(query)

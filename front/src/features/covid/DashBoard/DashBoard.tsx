@@ -23,6 +23,10 @@ const useStyles = makeStyles((theme) =>({
     title: {
         flexGrow: 1,
     },
+    date: {
+        flexGrow: 1,
+        textAlign: "right",
+    },
     content: {
         marginTop: 85,
     }
@@ -41,12 +45,11 @@ const DashBoard: React.FC = () => {
         <div>
             <AppBar position="absolute">
                 <Toolbar>
-                    <Typography variant="h6" className={classes.title}>
-                        <div>
-                            <Typography>
-                                {new Date(`${latestData.year}/${latestData.month}/${latestData.date}`).toDateString()}
-                            </Typography>
-                        </div>
+                   <Typography className={classes.title} variant="h6" >
+                        Covid19
+                    </Typography>
+                    <Typography variant="h6" className={classes.date}>
+                        {new Date(`${latestData.year}/${latestData.month}/${latestData.date}`).toDateString()}
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -59,7 +62,7 @@ const DashBoard: React.FC = () => {
                     <Grid item xs={12} md={12}>
                         <Cards />
                     </Grid>
-                    <Grid item xs={12} md={7}>
+                    <Grid item xs={12} md={12}>
                         <Chart />
                     </Grid>
                 </Grid>

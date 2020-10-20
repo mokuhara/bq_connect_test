@@ -15,7 +15,7 @@ const Cards: React.FC = () => {
   const data = useSelector(selectData);
   return (<div className={styles.container}>
     <Grid container spacing={1} justify="center">
-      <Grid item xs={12} md={3} component={Card} className={styles.infected}>
+      <Grid item xs={12} md={3} component={Card} className={styles.peopleTested}>
         <Typography color="textSecondary" gutterBottom>
           <AiFillLike />
       検査数
@@ -30,7 +30,7 @@ const Cards: React.FC = () => {
           />
         </Typography>
       </Grid>
-      <Grid item xs={12} md={3} component={Card} className={styles.recovered}>
+      <Grid item xs={12} md={3} component={Card} className={styles.hospitalized}>
         <Typography color="textSecondary" gutterBottom>
           <MdLocalHospital />
           入院数

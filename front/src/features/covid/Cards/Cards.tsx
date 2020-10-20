@@ -21,13 +21,13 @@ const Cards: React.FC = () => {
       検査数
         </Typography>
         <Typography variant="h5">
-        {data[data.length - 1].peopleTested}
-          {/* <CountUp
+        {/* {data[data.length - 1].peopleTested} */}
+          <CountUp
             start={0}
             end={data[data.length - 1].peopleTested}
             duration={1.5}
             separator=","
-          /> */}
+          />
         </Typography>
       </Grid>
       <Grid item xs={12} md={3} component={Card} className={styles.recovered}>
@@ -36,13 +36,13 @@ const Cards: React.FC = () => {
           入院数
         </Typography>
         <Typography variant="h5">
-        {data[data.length - 1].hospitalized}
-          {/* <CountUp
+        {/* {data[data.length - 1].hospitalized} */}
+          <CountUp
             start={0}
             end={data[data.length - 1].hospitalized}
             duration={1.5}
             separator=","
-          /> */}
+          />
         </Typography>
       </Grid>
       <Grid item xs={12} md={3} component={Card} className={styles.deaths}>
@@ -51,13 +51,13 @@ const Cards: React.FC = () => {
           死亡者数
         </Typography>
         <Typography variant="h5">
-        {data[data.length - 1].deaths}
-          {/* <CountUp
+        {/* {data[data.length - 1].deaths} */}
+          <CountUp
             start={0}
             end={data[data.length - 1].deaths}
             duration={1.5}
             separator=","
-          /> */}
+          />
         </Typography>
       </Grid>
     </Grid>

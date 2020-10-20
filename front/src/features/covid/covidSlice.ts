@@ -3,7 +3,7 @@ import axios from "axios";
 import { RootState } from "../../app/store";
 import covidData from "./apiCovid.json";
 
-const apiUrl = "http://localhost:6000/api/get";
+const apiUrl = "http://localhost:6001/api/get";
 
 type COVIDDATA = typeof covidData;
 

@@ -9,7 +9,7 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ exteded: true }));
 app.use(bodyParser.json());
 
-const port = process.env.PORT || 6000;
+const port = process.env.PORT || 6001;
 
 const router = require("./routes/");
 app.use("/", router);
